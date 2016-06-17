@@ -1,3 +1,14 @@
+[TODO]
+1. Overview detail descriptions
+2. Pinouts detail descriptions
+3. Assembly module Picture & descriptions
+4. How to use BLE shepherd(freebird) detail descriptions
+5. Electrical Specifications test value
+6. upload Schematic picture
+
+
+
+
 # Smart Power Relay  
 ---  
 ![Smart Power Relay](http://imgur.com/blQHcna "Smart Power Relay")  
@@ -40,7 +51,8 @@ Read PIR state
 
 <a name="Assembly"></a>
 ## 3. Assembly  
-#### USB 5V Power moudle  
+
+#### USB 5V Power module  
 #### BLE module  
 #### Smart Power Relay module  
 
