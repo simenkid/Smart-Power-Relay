@@ -1,80 +1,56 @@
-[TODO]
-1. Overview detail descriptions
-2. Pinouts detail descriptions
-3. Assembly module Picture & descriptions
-4. How to use BLE shepherd(freebird) detail descriptions
-5. Electrical Specifications test value
-6. upload Schematic picture
-
-
-
+[TODO]  
+1. 模組疊合  
+2.   
 
 # Smart Power Relay  
 ---  
-![Smart Power Relay](http://imgur.com/blQHcna "Smart Power Relay")  
 
 ## Guide Content  
 
-1. [Overiew](#Overiew)  
-2. [Pinouts](#Pinouts)  
-3. [Assembly](#Assembly)  
-4. [How to use](#How to use)  
-5. [Electrical Specifications](#Electrical Specifications)  
-6. [Downloads](#Downloads)  
+1. [Introduction](#Introduction)  
+2. [Hardware Overview](#Hardware Overview)  
+3. [Usage](#Usage)  
+4. [Reference](#Reference)  
 
 
-<a name="Overiew"></a>
-## 1. Overview  
+<a name="Introduction"></a>
+## 1. Introduction  
 
-This module can remote control on/off status, measure current AC cureent and connect PIR sensor(optional). The current data from ACS712-05A will be receive to ADC which is on the BLE.  
+Sivann的SmartPower模組可偵測電流值以及控制Relay的NC/NO，模組上有ACS712ELCTR-05B-T感測器以及TRB1-05D繼電器。  
+ACS712ELCTR-05B-T可感測電流值，其相關的詳細資料在Reference，請自行參閱。  
+#### Sivann模組疊合  
+Sivann除了感測模組外還有供電模組及無線模組，使用者可以將模組疊合使用，更為方便，相關介紹在sivann模組疊合介紹。  
+#### Features  
+ * 量測AC/DC電流，電流值最大不超過3A  
+ * 控制繼電器NC/NO  
 
-* Features
-  * remote control relay ON/OFF status
-  * measure/report AC current from 0.12 to 3A
-  * measure/report AC power
-  * (optional) Connect a PIR sensor for triggering
+<a name="Hardware Overview"></a>
+## 2. Hardware Overview  
 
+![Smart Power Relay](http://i.imgur.com/GWADze7.png "Smart Power Relay")  
 
-
-
-<a name="Pinouts"></a>
-## 2. Pinouts  
-
+#### Pinouts  
+* Power Pins:  
+  * 5V – 供電給繼電器及ACS712使用。  
+  * Vcc(3.3V) – 供電給光耦合器。  
+  * GND – 5V及Vcc共同的地。   
 * AO  
-Read Current data  
+ACS712的電壓輸出。  
 * DIN  
-Contorl Relay on/off  
+控制繼電器NC/NO。  
 * 5VCal  
-Reference Voltage  
+給設計者一參考電壓，數值為5V的一半。主要是為了設計者在設計電流轉換時所需要的電壓基準值(詳細請參考Reference的ACS712)。  
 * PIR(optional)  
-Read PIR state  
+讀取PIR狀態。  
 
-<a name="Assembly"></a>
-## 3. Assembly  
+<a name="Usage"></a>
+## 3. Usage  
 
-#### USB 5V Power module  
-#### BLE module  
-#### Smart Power Relay module  
+供電5V及Vcc並接好GND。  
+將待量測電流事物接於COM及NC/NO。  
 
-<a name="How to use"></a>
-## 4. How to use  
-
-* BLE Dongle + BLE shepherd(freebird)  
-* How to use BLE shepherd(freebird)  
-
-<a name="Electrical Specifications"></a>
-## 5. Electrical Specifications   
-
-| Parameter         | Absolute Maximum Rating  | Uints  
-|-------------------|--------------------------|-------------  
-| Power             |                          |  W  
-| Operating current |                          |  A  
-| Vcc to Gound      |                          |  V  
-| 5V to Ground      |                          |  V  
-
-<a name="Downloads"></a>
-## 6. Downloads  
-
+<a name="Reference"></a>
+## 4. Reference  
  
 [ACS712 Datasheets](http://pdf1.alldatasheet.com/datasheet-pdf/view/168326/ALLEGRO/ACS712.html "ACS712")  
 Schematic  
